@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use "akinsho/toggleterm.nvim"
+  use "moll/vim-bbye"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -72,7 +73,6 @@ return packer.startup(function(use)
   use "rcarriga/nvim-notify"
   use "tversteeg/registers.nvim"
   -- use "metakirby5/codi.vim"
-  use "nyngwang/NeoZoom.lua"
   use "SmiteshP/nvim-gps"
   use { "michaelb/sniprun", run = "bash ./install.sh" }
   use {
@@ -88,7 +88,7 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "rose-pine/neovim"
   use "rebelot/kanagawa.nvim"
-  use "arcticicestudio/nord-vim"
+  use 'shaunsingh/nord.nvim'
 
   -- cmp plugins
   use { "hrsh7th/nvim-cmp" } -- The completion plugin
