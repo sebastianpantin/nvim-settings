@@ -46,11 +46,9 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim"
-  use "kyazdani42/nvim-web-devicons"
-  use { "kyazdani42/nvim-tree.lua", commit = "f183c7f31197ae499c3420341fb8b275636a49b8" }
+  use { "kyazdani42/nvim-tree.lua", requires = { 'kyazdani42/nvim-web-devicons' } } --, commit = "f183c7f31197ae499c3420341fb8b275636a49b8" }
   use "akinsho/bufferline.nvim"
-  use "moll/vim-bbye"
-  use "nvim-lualine/lualine.nvim"
+  use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
@@ -62,16 +60,12 @@ return packer.startup(function(use)
   use "phaazon/hop.nvim"
   use "andymass/vim-matchup"
   use "nacro90/numb.nvim"
-  use "monaqa/dial.nvim"
   use "br1anchen/nvim-colorizer.lua"
-  use "windwp/nvim-spectre"
   use "folke/zen-mode.nvim"
   use "karb94/neoscroll.nvim"
   use "folke/todo-comments.nvim"
   use "kevinhwang91/nvim-bqf"
-  use "ThePrimeagen/harpoon"
   use "MattesGroeger/vim-bookmarks"
-  use "lunarvim/vim-solidity"
   use "Mephistophiles/surround.nvim"
   use "tpope/vim-repeat"
   use "Shatur/neovim-session-manager"
@@ -94,10 +88,10 @@ return packer.startup(function(use)
   use "lunarvim/darkplus.nvim"
   use "rose-pine/neovim"
   use "rebelot/kanagawa.nvim"
-  use "shaunsingh/nord.nvim"
+  use "arcticicestudio/nord-vim"
 
   -- cmp plugins
-  use { "hrsh7th/nvim-cmp", commit = "d93104244c3834fbd8f3dd01da9729920e0b5fe7" } -- The completion plugin
+  use { "hrsh7th/nvim-cmp" } -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
@@ -144,8 +138,8 @@ return packer.startup(function(use)
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   }
-  use "github/copilot.vim"
   use "RRethy/vim-illuminate"
+  use "simrat39/rust-tools.nvim"
 
   -- Java
   use "mfussenegger/nvim-jdtls"
@@ -182,6 +176,9 @@ return packer.startup(function(use)
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   use "Pocco81/DAPInstall.nvim"
+  
+  -- Python
+  use "petobens/poet-v"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

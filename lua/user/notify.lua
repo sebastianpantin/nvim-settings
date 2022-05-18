@@ -19,14 +19,14 @@ notify.setup {
   render = "default",
 
   -- Default timeout for notifications
-  timeout = 175,
+  timeout = 700,
 
   -- For stages that change opacity this is treated as the highlight behind the window
   -- Set this to either a highlight group or an RGB hex value e.g. "#000000"
   background_colour = "Normal",
 
   -- Minimum width for notification windows
-  minimum_width = 10,
+  minimum_width = 30,
 
   -- Icons for the different levels
   icons = {
