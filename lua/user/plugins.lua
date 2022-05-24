@@ -46,7 +46,9 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim"
-  use { "kyazdani42/nvim-tree.lua", requires = { 'kyazdani42/nvim-web-devicons' } } --, commit = "f183c7f31197ae499c3420341fb8b275636a49b8" }
+  use { "kyazdani42/nvim-tree.lua", requires = { 'kyazdani42/nvim-web-devicons' } }
+
+  use "tamago324/lir.nvim"
   use "akinsho/bufferline.nvim"
   use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use "akinsho/toggleterm.nvim"
@@ -61,7 +63,7 @@ return packer.startup(function(use)
   use "phaazon/hop.nvim"
   use "andymass/vim-matchup"
   use "nacro90/numb.nvim"
-  use "br1anchen/nvim-colorizer.lua"
+  use "norcalli/nvim-colorizer.lua"
   use "folke/zen-mode.nvim"
   use "karb94/neoscroll.nvim"
   use "folke/todo-comments.nvim"
@@ -69,14 +71,14 @@ return packer.startup(function(use)
   use "MattesGroeger/vim-bookmarks"
   use "Mephistophiles/surround.nvim"
   use "tpope/vim-repeat"
-  use "Shatur/neovim-session-manager"
+  -- use "Shatur/neovim-session-manager"
   use "rcarriga/nvim-notify"
   use "tversteeg/registers.nvim"
   -- use "metakirby5/codi.vim"
+  use { "nyngwang/NeoZoom.lua", branch = "neo-zoom-original" }
   use "SmiteshP/nvim-gps"
   use { "michaelb/sniprun", run = "bash ./install.sh" }
   use {
-
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
@@ -87,11 +89,11 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "rose-pine/neovim"
-  use "rebelot/kanagawa.nvim"
+  -- use "rebelot/kanagawa.nvim"
   use 'shaunsingh/nord.nvim'
 
   -- cmp plugins
-  use { "hrsh7th/nvim-cmp" } -- The completion plugin
+  use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
@@ -157,7 +159,7 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-  use {'p00f/nvim-ts-rainbow', commit = 'c6c26c4def0e9cd82f371ba677d6fc9baa0038af'}
+  use {'p00f/nvim-ts-rainbow'}
   use "nvim-treesitter/playground"
   use "windwp/nvim-ts-autotag"
   use "romgrk/nvim-treesitter-context"

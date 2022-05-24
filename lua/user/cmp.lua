@@ -25,7 +25,7 @@ cmp.setup {
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
-  mapping = {
+  mapping = cmp.mapping.preset.insert {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
     ["<C-j>"] = cmp.mapping.select_next_item(),
     ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
@@ -114,11 +114,19 @@ cmp.setup {
     select = false,
   },
   -- documentation = true,
-  documentation = {
-  	border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+  window = {
+    -- documentation = "native",
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+    },
+    completion = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
+    },
   },
   experimental = {
     ghost_text = true,
-    native_menu = false,
+    -- native_menu = false,
   },
 }

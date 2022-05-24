@@ -94,10 +94,11 @@ local m_mappings = {
   h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
   j = { "<cmd>BookmarkNext<cr>", "Next" },
   k = { "<cmd>BookmarkPrev<cr>", "Prev" },
-  s = {
-    "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
-    "Show",
-  },
+  s = { "<cmd>BookmarkShowAll<cr>", "ShowAll" },
+  -- s = {
+  --   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
+  --   "Show",
+  -- },
   x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
   u = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon UI" },
 }
@@ -109,18 +110,21 @@ local mappings = {
     "Buffers",
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  -- ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["w"] = { "<cmd>w<CR>", "Write" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No HL" },
-  -- ["q"] = { "<cmd>q!<CR>", "Quit" },
+  ["q"] = { "<cmd>q<CR>", "Quit" },
   ["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>', "Comment" },
+  -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+
+  -- :lua require'lir.float'.toggle()
   -- ["f"] = {
   --   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   --   "Find files",
   -- },
   -- ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
+  -- ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
   ["z"] = { "<cmd>ZenMode<cr>", "Zen" },
   ["gy"] = "Link",
 
@@ -133,6 +137,14 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 
+  o = {
+    name = "Options",
+    w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
+    r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
+    l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "CursorLine" },
+    s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
+  },
+
   r = {
     name = "Replace",
     r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
@@ -141,7 +153,7 @@ local mappings = {
   },
 
   f = {
-    name = "Fin",
+    name = "Find",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = {
@@ -221,6 +233,7 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
+    t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', "Toggle Diagnostics" },
   },
 
   s = {

@@ -97,6 +97,8 @@ keymap("n", "<C-t>", "<cmd>lua vim.lsp.buf.document_symbol()<cr>", opts)
 keymap("n", "<C-s>", "<cmd>vsplit<cr>", opts)
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 keymap("n", "<c-n>", ":e ~/Notes/<cr>", opts)
+
+keymap("n", "-", ":lua require'lir.float'.toggle()<cr>", opts)
 -- keymap("n", "<C-\\>", "<cmd>vsplit<cr>", opts)
 -- vim.cmd[[nnoremap c* /\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgn]]
 -- vim.cmd[[nnoremap c# ?\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgN]]
@@ -105,4 +107,4 @@ keymap("n", "<c-n>", ":e ~/Notes/<cr>", opts)
 -- keymap("n", "gx", [[:execute '!brave ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)
 keymap("n", "gx", [[:silent execute '!$BROWSER ' . shellescape(expand('<cfile>'), 1)<CR>]], opts)
 -- Change '<CR>' to whatever shortcut you like :)
-vim.api.nvim_set_keymap('n', '<CR>', '<cmd>NeoZoomToggle<CR>', { noremap=true, silent=true, nowait=true })
+vim.api.nvim_set_keymap("n", "<CR>", "<cmd>NeoZoomToggle<CR>", { noremap = true, silent = true, nowait = true })
