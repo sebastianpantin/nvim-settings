@@ -15,6 +15,10 @@ local servers = {
   "tsserver",
   "yamlls",
   "jedi_language_server",
+  "dockerls",
+  "rust_analyzer",
+  "omnisharp",
+  "sqlls",
 }
 
 local settings = {
