@@ -80,6 +80,7 @@ end
 
 M.on_attach = function(client, bufnr)
   notify({"Added LSP client:", client.name})
+  -- end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end

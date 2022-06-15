@@ -43,12 +43,11 @@ return packer.startup(function(use)
   -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim"
   use { "kyazdani42/nvim-tree.lua", requires = { 'kyazdani42/nvim-web-devicons' } }
 
-  use "tamago324/lir.nvim"
   use "akinsho/bufferline.nvim"
   use { "nvim-lualine/lualine.nvim", requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use "akinsho/toggleterm.nvim"
@@ -59,37 +58,18 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
-  use "unblevable/quick-scope"
-  use "phaazon/hop.nvim"
-  use "andymass/vim-matchup"
   use "nacro90/numb.nvim"
   use "norcalli/nvim-colorizer.lua"
-  use "folke/zen-mode.nvim"
-  use "karb94/neoscroll.nvim"
   use "folke/todo-comments.nvim"
-  use "kevinhwang91/nvim-bqf"
-  use "MattesGroeger/vim-bookmarks"
   use "Mephistophiles/surround.nvim"
   use "tpope/vim-repeat"
-  -- use "Shatur/neovim-session-manager"
   use "rcarriga/nvim-notify"
   use "tversteeg/registers.nvim"
-  -- use "metakirby5/codi.vim"
-  use { "nyngwang/NeoZoom.lua", branch = "neo-zoom-original" }
   use "SmiteshP/nvim-gps"
   use { "michaelb/sniprun", run = "bash ./install.sh" }
-  use {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = "markdown",
-  }
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
-  use "rose-pine/neovim"
-  -- use "rebelot/kanagawa.nvim"
   use 'shaunsingh/nord.nvim'
 
   -- cmp plugins
@@ -132,10 +112,7 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-  use "filipdutescu/renamer.nvim"
-  use "simrat39/symbols-outline.nvim"
   use "ray-x/lsp_signature.nvim"
-  use "b0o/SchemaStore.nvim"
   use {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
@@ -143,15 +120,8 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
   use "simrat39/rust-tools.nvim"
 
-  -- Java
-  use "mfussenegger/nvim-jdtls"
-
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use "tom-anders/telescope-vim-bookmarks.nvim"
-  use "nvim-telescope/telescope-media-files.nvim"
-  use "nvim-telescope/telescope-ui-select.nvim"
-  use "nvim-telescope/telescope-file-browser.nvim"
 
   -- Treesitter
   use {
@@ -170,7 +140,6 @@ return packer.startup(function(use)
   use "f-person/git-blame.nvim"
   use "ruifm/gitlinker.nvim"
   use "mattn/vim-gist"
-  use "mattn/webapi-vim"
   use "https://github.com/rhysd/conflict-marker.vim"
 
   -- DAP
@@ -178,7 +147,7 @@ return packer.startup(function(use)
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   use "Pocco81/DAPInstall.nvim"
-  
+
   -- Python
   use "petobens/poet-v"
 
